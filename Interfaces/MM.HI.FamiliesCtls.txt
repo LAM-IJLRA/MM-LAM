@@ -1,0 +1,16 @@
+"Joystick 12 boutons", Gachette "Bouton 2" "Bouton 3" "Bouton 4" "Bouton 5" "Bouton 6" "7 (F2)" "8 (F1)" "11 (F3)" "12 (F4)" "9 (Flèche gauche)" "10 (Flèche droite)" "Axe X" "Axe Y" "Axe Z" Nageoire Molette;
+"Joystick 17 boutons", Gachette "Bouton 3" "Bouton 2" "Bouton 4" G2 G4 G6 G5 G3 G1 D5 D3 D1 D2 D4 D6 Mollette "Axe X" "Axe Y" "Axe Z" Nageoire;
+"Joystick Double Nageoire", Gachette "Bouton 3" "Bouton 4" "Bouton 2" "Bouton 5" "Bouton 6" "Bouton 7" "Bouton 8" "Bouton 9" "Bouton 10" "Bouton 11" "Roulette vers le haut" "Roulette vers le bas" "Bouton central bas" "Axe X" "Axe Y" "Axe Z" "Nageoire Gauche" "Nageoire droite" Mollette;
+"Souris USB", "Clic gauche" "Clic droit" "Clic molette" "Acceleration X" "Acceleration Y" "Molette verticale" Molette;
+"Gamepad 12 boutons", "Bouton 1" "Bouton 2" "Bouton 3" "Bouton 4" "Bouton 5" "Bouton 6" "Bouton 7" "Bouton 8" "Bouton 9" "Bouton 10" "Clic ministick gauche" "Clic ministick droit" "Ministick droit Axe Y" "Ministick droit Axe X" "Ministick gauche Axe Y" "Ministick gauche Axe X" "Croix directionelle";
+"Souris USB 7 controles", "Clic gauche" "Clic droit" "Clic mollette" "Acceleration X" "Acceleration Y" "Molette Axe Y" "Mollette Axe X";
+Wiimote, "ir xys 1 0" "ir xys 1 1" "ir xys 1 2" "ir xys 2 0" "ir xys 2 1" "ir xys 2 2" "ir xys 3 0" "ir xys 3 1" "ir xys 3 2" "ir xys 4 0" "ir xys 4 1" "ir xys 4 2" "motion angles 0" "motion angles 1" "motion angles 2" "motion velo 0" "motion velo 1" "motion velo 2" "accel xyz 0" "accel xyz 1" "accel xyz 2" "accel pry 0" "accel pry 1" "accel pry 2" "accel pry 3" "button B" "button A" "button Down" "button Left" "button Minus" "button Home" "button Plus" "button 1" "button 2" "button Right" "button Up";
+TestMIDI, Volume;
+Curseur, Clic "Position X" "Position Y" Cmd Shift "Caps Lock" Alt Ctrl;
+"Tablette graphique", "Position X" "Position Y" Pression "Tilt X" "Tilt Y" Contact "Bouton avant" "Bouton arrière" Présence;
+wii, "ir xys 1 0" "ir xys 1 1" "ir xys 1 2" "ir xys 2 0" "ir xys 2 1" "ir xys 2 2" "ir xys 3 0" "ir xys 3 1" "ir xys 3 2" "ir xys 4 0" "ir xys 4 1" "ir xys 4 2" "motion angles 0" "motion angles 1" "motion angles 2" "accel xyz 0" "accel xyz 1" "accel xyz 2" "accel pry 0" "accel pry 1" "accel pry 2" "accel pry 3" "button A" "button Minus" "button Plus" "button Home" "button Left" "button Right" "button Down" "button B" "button 1" "button 2";
+"Simple Souris USB", "Clic gauche" "Clic droit" "Clic molette" "Acceleration X" "Acceleration Y" Molette;
+testOSC, param param2;
+Kinect, righthandX righthandY righthandZ lefthandX lefthandY lefthandZ rightelbowX rightelbowY rightelbowZ leftelbowX leftelbowY leftelbowZ rightkneeX rightkneeY rightkneeZ leftkneeX leftkneeY leftkneeZ rightfootX rightfootY rightfootZ leftfootX leftfootY leftfootZ headX headY headZ torsoX torsoY torsoZ;
+lol, "Bouton 1" "Bouton 4" "Bouton 3" "Bouton 2";
+mrmr, "0 tactilezoneX" "0 tactilezoneY" "0 tactilezoneTouchDown" "2 pushbutton" "1 pushbutton" "3 tactilezoneTouchDown";

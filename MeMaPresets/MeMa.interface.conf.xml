@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+
+<pattrstorage name = "MeMa.interface.conf">
+	<slot number = "1" name = "test 1">
+		<pattr name = "1-InterfaceRouter" value = "Joystick 12 boutons 2" />
+		<pattr name = "10-InterfaceRouter" value = "Joystick 12 boutons 10" />
+		<pattr name = "11-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "12-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "13-InterfaceRouter" value = "Joystick 12 boutons 13" />
+		<pattr name = "14-InterfaceRouter" value = "Joystick 12 boutons 14" />
+		<pattr name = "15-InterfaceRouter" value = "Joystick 12 boutons 15" />
+		<pattr name = "16-InterfaceRouter" value = "Joystick 12 boutons 16" />
+		<pattr name = "17-InterfaceRouter" value = "Joystick 12 boutons 17" />
+		<pattr name = "18-InterfaceRouter" value = "interface Joystick18" />
+		<pattr name = "19-InterfaceRouter" value = "interface Joystick19" />
+		<pattr name = "2-InterfaceRouter" value = "Joystick 12 boutons 3" />
+		<pattr name = "20-InterfaceRouter" value = "interface Joystick20" />
+		<pattr name = "21-InterfaceRouter" value = "interface Joystick21" />
+		<pattr name = "22-InterfaceRouter" value = "interface Joystick22" />
+		<pattr name = "23-InterfaceRouter" value = "interface Joystick23" />
+		<pattr name = "24-InterfaceRouter" value = "interface Joystick24" />
+		<pattr name = "25-InterfaceRouter" value = "interface Joystick25" />
+		<pattr name = "26-InterfaceRouter" value = "interface Joystick26" />
+		<pattr name = "27-InterfaceRouter" value = "interface Joystick27" />
+		<pattr name = "28-InterfaceRouter" value = "interface Joystick28" />
+		<pattr name = "29-InterfaceRouter" value = "interface Joystick29" />
+		<pattr name = "3-InterfaceRouter" value = "Joystick 12 boutons 1" />
+		<pattr name = "30-InterfaceRouter" value = "interface Joystick30" />
+		<pattr name = "4-InterfaceRouter" value = "Gamepad 12 boutons 3" />
+		<pattr name = "5-InterfaceRouter" value = "Gamepad 12 boutons 3" />
+		<pattr name = "6-InterfaceRouter" value = "Gamepad 12 boutons 1" />
+		<pattr name = "7-InterfaceRouter" value = "Joystick 12 boutons 7" />
+		<pattr name = "8-InterfaceRouter" value = "Joystick 12 boutons 8" />
+		<pattr name = "9-InterfaceRouter" value = "Joystick 12 boutons 9" />
+	</slot>
+	<slot number = "2" name = "standard">
+		<pattr name = "1-InterfaceRouter" value = "Joystick 12 boutons 1" />
+		<pattr name = "10-InterfaceRouter" value = "Joystick 12 boutons 10" />
+		<pattr name = "11-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "12-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "13-InterfaceRouter" value = "Joystick 12 boutons 13" />
+		<pattr name = "14-InterfaceRouter" value = "Joystick 12 boutons 14" />
+		<pattr name = "15-InterfaceRouter" value = "Joystick 12 boutons 15" />
+		<pattr name = "16-InterfaceRouter" value = "Joystick 12 boutons 16" />
+		<pattr name = "17-InterfaceRouter" value = "Joystick 12 boutons 17" />
+		<pattr name = "18-InterfaceRouter" value = "interface Joystick18" />
+		<pattr name = "19-InterfaceRouter" value = "interface Joystick19" />
+		<pattr name = "2-InterfaceRouter" value = "Joystick 12 boutons 2" />
+		<pattr name = "20-InterfaceRouter" value = "interface Joystick20" />
+		<pattr name = "21-InterfaceRouter" value = "interface Joystick21" />
+		<pattr name = "22-InterfaceRouter" value = "interface Joystick22" />
+		<pattr name = "23-InterfaceRouter" value = "interface Joystick23" />
+		<pattr name = "24-InterfaceRouter" value = "interface Joystick24" />
+		<pattr name = "25-InterfaceRouter" value = "interface Joystick25" />
+		<pattr name = "26-InterfaceRouter" value = "interface Joystick26" />
+		<pattr name = "27-InterfaceRouter" value = "interface Joystick27" />
+		<pattr name = "28-InterfaceRouter" value = "interface Joystick28" />
+		<pattr name = "29-InterfaceRouter" value = "interface Joystick29" />
+		<pattr name = "3-InterfaceRouter" value = "Joystick 12 boutons 3" />
+		<pattr name = "30-InterfaceRouter" value = "interface Joystick30" />
+		<pattr name = "4-InterfaceRouter" value = "Gamepad 12 boutons 1" />
+		<pattr name = "5-InterfaceRouter" value = "Gamepad 12 boutons 2" />
+		<pattr name = "6-InterfaceRouter" value = "Gamepad 12 boutons 3" />
+		<pattr name = "7-InterfaceRouter" value = "Joystick 12 boutons 7" />
+		<pattr name = "8-InterfaceRouter" value = "Joystick 12 boutons 8" />
+		<pattr name = "9-InterfaceRouter" value = "Joystick 12 boutons 9" />
+	</slot>
+	<slot number = "3" name = "Nouv">
+		<pattr name = "1-InterfaceRouter" value = "Joystick 12 boutons 6" />
+		<pattr name = "10-InterfaceRouter" value = "Joystick 12 boutons 10" />
+		<pattr name = "11-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "12-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "13-InterfaceRouter" value = "Joystick 12 boutons 13" />
+		<pattr name = "14-InterfaceRouter" value = "Joystick 12 boutons 14" />
+		<pattr name = "15-InterfaceRouter" value = "Joystick 12 boutons 15" />
+		<pattr name = "16-InterfaceRouter" value = "Joystick 12 boutons 16" />
+		<pattr name = "17-InterfaceRouter" value = "Joystick 12 boutons 17" />
+		<pattr name = "18-InterfaceRouter" value = "interface Joystick18" />
+		<pattr name = "19-InterfaceRouter" value = "interface Joystick19" />
+		<pattr name = "2-InterfaceRouter" value = "Joystick 12 boutons 5" />
+		<pattr name = "20-InterfaceRouter" value = "interface Joystick20" />
+		<pattr name = "21-InterfaceRouter" value = "interface Joystick21" />
+		<pattr name = "22-InterfaceRouter" value = "interface Joystick22" />
+		<pattr name = "23-InterfaceRouter" value = "interface Joystick23" />
+		<pattr name = "24-InterfaceRouter" value = "interface Joystick24" />
+		<pattr name = "25-InterfaceRouter" value = "interface Joystick25" />
+		<pattr name = "26-InterfaceRouter" value = "interface Joystick26" />
+		<pattr name = "27-InterfaceRouter" value = "interface Joystick27" />
+		<pattr name = "28-InterfaceRouter" value = "interface Joystick28" />
+		<pattr name = "29-InterfaceRouter" value = "interface Joystick29" />
+		<pattr name = "3-InterfaceRouter" value = "Joystick 12 boutons 3" />
+		<pattr name = "30-InterfaceRouter" value = "interface Joystick30" />
+		<pattr name = "4-InterfaceRouter" value = "Joystick 12 boutons 2" />
+		<pattr name = "5-InterfaceRouter" value = "Joystick 12 boutons 4" />
+		<pattr name = "6-InterfaceRouter" value = "Joystick 12 boutons 1" />
+		<pattr name = "7-InterfaceRouter" value = "Joystick 12 boutons 7" />
+		<pattr name = "8-InterfaceRouter" value = "Joystick 12 boutons 8" />
+		<pattr name = "9-InterfaceRouter" value = "Joystick 12 boutons 9" />
+	</slot>
+	<slot number = "4" name = "Atelier231">
+		<pattr name = "1-InterfaceRouter" value = "Joystick 12 boutons 9" />
+		<pattr name = "10-InterfaceRouter" value = "Joystick 12 boutons 10" />
+		<pattr name = "11-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "12-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "13-InterfaceRouter" value = "Joystick 12 boutons 13" />
+		<pattr name = "14-InterfaceRouter" value = "Joystick 12 boutons 14" />
+		<pattr name = "15-InterfaceRouter" value = "Joystick 12 boutons 15" />
+		<pattr name = "16-InterfaceRouter" value = "Joystick 12 boutons 16" />
+		<pattr name = "17-InterfaceRouter" value = "Joystick 12 boutons 17" />
+		<pattr name = "18-InterfaceRouter" value = "interface Joystick18" />
+		<pattr name = "19-InterfaceRouter" value = "interface Joystick19" />
+		<pattr name = "2-InterfaceRouter" value = "Joystick 12 boutons 6" />
+		<pattr name = "20-InterfaceRouter" value = "interface Joystick20" />
+		<pattr name = "21-InterfaceRouter" value = "interface Joystick21" />
+		<pattr name = "22-InterfaceRouter" value = "interface Joystick22" />
+		<pattr name = "23-InterfaceRouter" value = "interface Joystick23" />
+		<pattr name = "24-InterfaceRouter" value = "interface Joystick24" />
+		<pattr name = "25-InterfaceRouter" value = "interface Joystick25" />
+		<pattr name = "26-InterfaceRouter" value = "interface Joystick26" />
+		<pattr name = "27-InterfaceRouter" value = "interface Joystick27" />
+		<pattr name = "28-InterfaceRouter" value = "interface Joystick28" />
+		<pattr name = "29-InterfaceRouter" value = "interface Joystick29" />
+		<pattr name = "3-InterfaceRouter" value = "Joystick 12 boutons 3" />
+		<pattr name = "30-InterfaceRouter" value = "interface Joystick30" />
+		<pattr name = "4-InterfaceRouter" value = "Joystick 12 boutons 8" />
+		<pattr name = "5-InterfaceRouter" value = "Joystick 12 boutons 4" />
+		<pattr name = "6-InterfaceRouter" value = "Joystick 12 boutons 7" />
+		<pattr name = "7-InterfaceRouter" value = "Joystick 12 boutons 1" />
+		<pattr name = "8-InterfaceRouter" value = "Joystick 12 boutons 2" />
+		<pattr name = "9-InterfaceRouter" value = "Joystick 12 boutons 5" />
+	</slot>
+	<slot number = "5" name = "Sortie_Atelier231">
+		<pattr name = "1-InterfaceRouter" value = "Joystick 12 boutons 7" />
+		<pattr name = "10-InterfaceRouter" value = "Joystick 12 boutons 1" />
+		<pattr name = "11-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "12-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "13-InterfaceRouter" value = "Joystick 12 boutons 13" />
+		<pattr name = "14-InterfaceRouter" value = "Joystick 12 boutons 14" />
+		<pattr name = "15-InterfaceRouter" value = "Joystick 12 boutons 15" />
+		<pattr name = "16-InterfaceRouter" value = "Joystick 12 boutons 16" />
+		<pattr name = "17-InterfaceRouter" value = "Joystick 12 boutons 17" />
+		<pattr name = "18-InterfaceRouter" value = "interface Joystick18" />
+		<pattr name = "19-InterfaceRouter" value = "interface Joystick19" />
+		<pattr name = "2-InterfaceRouter" value = "Joystick 12 boutons 5" />
+		<pattr name = "20-InterfaceRouter" value = "interface Joystick20" />
+		<pattr name = "21-InterfaceRouter" value = "interface Joystick21" />
+		<pattr name = "22-InterfaceRouter" value = "interface Joystick22" />
+		<pattr name = "23-InterfaceRouter" value = "interface Joystick23" />
+		<pattr name = "24-InterfaceRouter" value = "interface Joystick24" />
+		<pattr name = "25-InterfaceRouter" value = "interface Joystick25" />
+		<pattr name = "26-InterfaceRouter" value = "interface Joystick26" />
+		<pattr name = "27-InterfaceRouter" value = "interface Joystick27" />
+		<pattr name = "28-InterfaceRouter" value = "interface Joystick28" />
+		<pattr name = "29-InterfaceRouter" value = "interface Joystick29" />
+		<pattr name = "3-InterfaceRouter" value = "Joystick 12 boutons 3" />
+		<pattr name = "30-InterfaceRouter" value = "interface Joystick30" />
+		<pattr name = "4-InterfaceRouter" value = "Joystick 12 boutons 10" />
+		<pattr name = "5-InterfaceRouter" value = "Joystick 12 boutons 2" />
+		<pattr name = "6-InterfaceRouter" value = "Joystick 12 boutons 8" />
+		<pattr name = "7-InterfaceRouter" value = "Joystick 12 boutons 4" />
+		<pattr name = "8-InterfaceRouter" value = "Joystick 12 boutons 6" />
+		<pattr name = "9-InterfaceRouter" value = "Joystick 12 boutons 9" />
+	</slot>
+	<slot number = "6" name = "Igny-fete_Muz">
+		<pattr name = "1-InterfaceRouter" value = "Joystick 12 boutons 15" />
+		<pattr name = "10-InterfaceRouter" value = "Joystick 12 boutons 3" />
+		<pattr name = "11-InterfaceRouter" value = "Joystick 12 boutons 6" />
+		<pattr name = "12-InterfaceRouter" value = "Joystick 12 boutons 4" />
+		<pattr name = "13-InterfaceRouter" value = "Joystick 12 boutons 7" />
+		<pattr name = "14-InterfaceRouter" value = "Joystick 12 boutons 5" />
+		<pattr name = "15-InterfaceRouter" value = "Joystick 12 boutons 9" />
+		<pattr name = "16-InterfaceRouter" value = "Joystick 12 boutons 8" />
+		<pattr name = "17-InterfaceRouter" value = "Joystick 12 boutons 2" />
+		<pattr name = "18-InterfaceRouter" value = "Joystick 12 boutons 1" />
+		<pattr name = "19-InterfaceRouter" value = "interface Joystick19" />
+		<pattr name = "2-InterfaceRouter" value = "Joystick 12 boutons 12" />
+		<pattr name = "20-InterfaceRouter" value = "interface Joystick20" />
+		<pattr name = "21-InterfaceRouter" value = "interface Joystick21" />
+		<pattr name = "22-InterfaceRouter" value = "interface Joystick22" />
+		<pattr name = "23-InterfaceRouter" value = "interface Joystick23" />
+		<pattr name = "24-InterfaceRouter" value = "interface Joystick24" />
+		<pattr name = "25-InterfaceRouter" value = "interface Joystick25" />
+		<pattr name = "26-InterfaceRouter" value = "interface Joystick26" />
+		<pattr name = "27-InterfaceRouter" value = "interface Joystick27" />
+		<pattr name = "28-InterfaceRouter" value = "interface Joystick28" />
+		<pattr name = "29-InterfaceRouter" value = "interface Joystick29" />
+		<pattr name = "3-InterfaceRouter" value = "Joystick 12 boutons 13" />
+		<pattr name = "30-InterfaceRouter" value = "interface Joystick30" />
+		<pattr name = "4-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "5-InterfaceRouter" value = "Joystick 12 boutons 10" />
+		<pattr name = "6-InterfaceRouter" value = "Joystick 12 boutons 14" />
+		<pattr name = "7-InterfaceRouter" value = "Joystick 12 boutons 18" />
+		<pattr name = "8-InterfaceRouter" value = "Joystick 12 boutons 17" />
+		<pattr name = "9-InterfaceRouter" value = "Joystick 12 boutons 16" />
+	</slot>
+	<slot number = "7" name = "Hamid">
+		<pattr name = "1-InterfaceRouter" value = "Joystick 12 boutons 7" />
+		<pattr name = "10-InterfaceRouter" value = "Joystick 12 boutons 10" />
+		<pattr name = "11-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "12-InterfaceRouter" value = "Joystick 12 boutons 11" />
+		<pattr name = "13-InterfaceRouter" value = "Joystick 12 boutons 13" />
+		<pattr name = "14-InterfaceRouter" value = "Joystick 12 boutons 14" />
+		<pattr name = "15-InterfaceRouter" value = "Joystick 12 boutons 15" />
+		<pattr name = "16-InterfaceRouter" value = "Joystick 12 boutons 16" />
+		<pattr name = "17-InterfaceRouter" value = "Joystick 12 boutons 17" />
+		<pattr name = "18-InterfaceRouter" value = "interface Joystick18" />
+		<pattr name = "19-InterfaceRouter" value = "interface Joystick19" />
+		<pattr name = "2-InterfaceRouter" value = "Joystick 12 boutons 5" />
+		<pattr name = "20-InterfaceRouter" value = "interface Joystick20" />
+		<pattr name = "21-InterfaceRouter" value = "interface Joystick21" />
+		<pattr name = "22-InterfaceRouter" value = "interface Joystick22" />
+		<pattr name = "23-InterfaceRouter" value = "interface Joystick23" />
+		<pattr name = "24-InterfaceRouter" value = "interface Joystick24" />
+		<pattr name = "25-InterfaceRouter" value = "interface Joystick25" />
+		<pattr name = "26-InterfaceRouter" value = "interface Joystick26" />
+		<pattr name = "27-InterfaceRouter" value = "interface Joystick27" />
+		<pattr name = "28-InterfaceRouter" value = "interface Joystick28" />
+		<pattr name = "29-InterfaceRouter" value = "interface Joystick29" />
+		<pattr name = "3-InterfaceRouter" value = "Joystick 12 boutons 3" />
+		<pattr name = "30-InterfaceRouter" value = "interface Joystick30" />
+		<pattr name = "4-InterfaceRouter" value = "Joystick 12 boutons 2" />
+		<pattr name = "5-InterfaceRouter" value = "Joystick 12 boutons 4" />
+		<pattr name = "6-InterfaceRouter" value = "Joystick 12 boutons 1" />
+		<pattr name = "7-InterfaceRouter" value = "Joystick 12 boutons 7" />
+		<pattr name = "8-InterfaceRouter" value = "Joystick 12 boutons 8" />
+		<pattr name = "9-InterfaceRouter" value = "Joystick 12 boutons 9" />
+	</slot>
+</pattrstorage>
+

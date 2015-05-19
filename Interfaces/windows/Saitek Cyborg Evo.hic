@@ -1,0 +1,17 @@
+0, continu "Axe X" 0 65535 32767 normal;
+4, continu "Axe Y" 0 65535 32767 inverse;
+40, continu Nageoire 0 65535 32768 inverse;
+20, continu "Axe Z" 0 65535 32767 normal;
+32, enum Molette 9 "-1 0 4500 9000 13500 18000 22500 27000 31500" -1 normal;
+8, bool Gachette 0 128 0 normal;
+49, bool "Bouton 2" 0 128 0 normal;
+50, bool "Bouton 3" 0 128 0 normal;
+51, bool "Bouton 4" 0 128 0 normal;
+52, bool "Bouton 5" 0 128 0 normal;
+53, bool "Bouton 6" 0 128 0 normal;
+54, bool F1 0 128 0 normal;
+55, bool F2 0 128 0 normal;
+56, bool F3 0 128 0 normal;
+57, bool F4 0 128 0 normal;
+58, bool "Fleche gauche" 0 128 0 normal;
+59, bool "Fleche droite" 0 128 0 normal;

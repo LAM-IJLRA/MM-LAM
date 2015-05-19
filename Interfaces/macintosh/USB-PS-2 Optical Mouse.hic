@@ -1,0 +1,1 @@
+3, bool "Clic gauche" 0 1 0 normal;4, bool "Clic droit" 0 1 0 normal;5, bool "Clic molette" 0 1 0 normal;6, continu "Acceleration X" -30 32 -1 normal;7, continu "Acceleration Y" -35 31 0 inverse;8, enum Molette 3 "-1 0 1" 0 normal;

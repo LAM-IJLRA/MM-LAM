@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+
+<pattrstorage name = "MeMa-liste_des_concerts">
+	<slot number = "1" name = "Cordeliers">
+		<pattr name = "1-orchestre-key" value = "Prop1" />
+		<pattr name = "2-orchestre-key" value = "Prop2" />
+		<pattr name = "3-orchestre-key" value = "Vide" />
+		<pattr name = "4-orchestre-key" value = "&quot;MeMaFMot x6&quot;" />
+		<pattr name = "5-orchestre-key" value = "&quot;Demo effets&quot;" />
+		<pattr name = "6-orchestre-key" value = "&quot;Concert de concert&quot;" />
+		<pattr name = "7-orchestre-key" value = "Vide" />
+		<pattr name = "8-orchestre-key" value = "&quot;Concert de concert&quot;" />
+		<pattr name = "9-orchestre-key" value = "&quot;MeMaFMot x6&quot;" />
+		<patcher name = "mema.pattr_PagesRouting_orch">
+			<pattr name = "1-page-keyA" value = "&quot;1 - Ecriture&quot;" />
+			<pattr name = "1-page-keyE" value = "&quot;3 - Kaelidoscope&quot;" />
+			<pattr name = "1-page-keyI" value = "0" />
+			<pattr name = "1-page-keyO" value = "0" />
+			<pattr name = "1-page-keyP" value = "0" />
+			<pattr name = "1-page-keyR" value = "0" />
+			<pattr name = "1-page-keyT" value = "0" />
+			<pattr name = "1-page-keyU" value = "0" />
+			<pattr name = "1-page-keyY" value = "0" />
+			<pattr name = "1-page-keyZ" value = "&quot;2 - Envois&quot;" />
+			<pattr name = "1-routing-keyA" value = "ICI" />
+			<pattr name = "1-routing-keyE" value = "ICI" />
+			<pattr name = "1-routing-keyI" value = "0" />
+			<pattr name = "1-routing-keyO" value = "0" />
+			<pattr name = "1-routing-keyP" value = "0" />
+			<pattr name = "1-routing-keyR" value = "0" />
+			<pattr name = "1-routing-keyT" value = "0" />
+			<pattr name = "1-routing-keyU" value = "0" />
+			<pattr name = "1-routing-keyY" value = "0" />
+			<pattr name = "1-routing-keyZ" value = "ICI" />
+		</patcher>
+		<patcher name = "mema.pattr_PagesRouting_orch[1]">
+			<pattr name = "2-page-keyA" value = "1" />
+			<pattr name = "2-page-keyE" value = "0" />
+			<pattr name = "2-page-keyI" value = "0" />
+			<pattr name = "2-page-keyO" value = "0" />
+			<pattr name = "2-page-keyP" value = "0" />
+			<pattr name = "2-page-keyR" value = "0" />
+			<pattr name = "2-page-keyT" value = "0" />
+			<pattr name = "2-page-keyU" value = "0" />
+			<pattr name = "2-page-keyY" value = "0" />
+			<pattr name = "2-page-keyZ" value = "0" />
+			<pattr name = "2-routing-keyA" value = "Proposition2" />
+			<pattr name = "2-routing-keyE" value = "0" />
+			<pattr name = "2-routing-keyI" value = "0" />
+			<pattr name = "2-routing-keyO" value = "0" />
+			<pattr name = "2-routing-keyP" value = "0" />
+			<pattr name = "2-routing-keyR" value = "0" />
+			<pattr name = "2-routing-keyT" value = "0" />
+			<pattr name = "2-routing-keyU" value = "0" />
+			<pattr name = "2-routing-keyY" value = "0" />
+			<pattr name = "2-routing-keyZ" value = "0" />
+		</patcher>
+		<patcher name = "mema.pattr_PagesRouting_orch[2]">
+			<pattr name = "3-page-keyA" value = "0" />
+			<pattr name = "3-page-keyE" value = "0" />
+			<pattr name = "3-page-keyI" value = "0" />
+			<pattr name = "3-page-keyO" value = "0" />
+			<pattr name = "3-page-keyP" value = "0" />
+			<pattr name = "3-page-keyR" value = "0" />
+			<pattr name = "3-page-keyT" value = "0" />
+			<pattr name = "3-page-keyU" value = "0" />
+			<pattr name = "3-page-keyY" value = "0" />
+			<pattr name = "3-page-keyZ" value = "0" />
+			<pattr name = "3-routing-keyA" value = "0" />
+			<pattr name = "3-routing-keyE" value = "0" />
+			<pattr name = "3-routing-keyI" value = "0" />
+			<pattr name = "3-routing-keyO" value = "0" />
+			<pattr name = "3-routing-keyP" value = "0" />
+			<pattr name = "3-routing-keyR" value = "0" />
+			<pattr name = "3-routing-keyT" value = "0" />
+			<pattr name = "3-routing-keyU" value = "0" />
+			<pattr name = "3-routing-keyY" value = "0" />
+			<pattr name = "3-routing-keyZ" value = "0" />
+		</patcher>
+		<patcher name = "mema.pattr_PagesRouting_orch[5]">
+			<pattr name = "4-page-keyA" value = "0" />
+			<pattr name = "4-page-keyE" value = "0" />
+			<pattr name = "4-page-keyI" value = "0" />
+			<pattr name = "4-page-keyO" value = "0" />
+			<pattr name = "4-page-keyP" value = "0" />
+			<pattr name = "4-page-keyR" value = "0" />
+			<pattr name = "4-page-keyT" value = "0" />
+			<pattr name = "4-page-keyU" value = "0" />
+			<pattr name = "4-page-keyY" value = "0" />
+			<pattr name = "4-page-keyZ" value = "0" />
+			<pattr name = "4-routing-keyA" value = "0" />
+			<pattr name = "4-routing-keyE" value = "0" />
+			<pattr name = "4-routing-keyI" value = "0" />
+			<pattr name = "4-routing-keyO" value = "0" />
+			<pattr name = "4-routing-keyP" value = "0" />
+			<pattr name = "4-routing-keyR" value = "0" />
+			<pattr name = "4-routing-keyT" value = "0" />
+			<pattr name = "4-routing-keyU" value = "0" />
+			<pattr name = "4-routing-keyY" value = "0" />
+			<pattr name = "4-routing-keyZ" value = "0" />
+		</patcher>
+		<patcher name = "mema.pattr_PagesRouting_orch[4]">
+			<pattr name = "5-page-keyA" value = "0" />
+			<pattr name = "5-page-keyE" value = "0" />
+			<pattr name = "5-page-keyI" value = "0" />
+			<pattr name = "5-page-keyO" value = "0" />
+			<pattr name = "5-page-keyP" value = "0" />
+			<pattr name = "5-page-keyR" value = "0" />
+			<pattr name = "5-page-keyT" value = "0" />
+			<pattr name = "5-page-keyU" value = "0" />
+			<pattr name = "5-page-keyY" value = "0" />
+			<pattr name = "5-page-keyZ" value = "0" />
+			<pattr name = "5-routing-keyA" value = "0" />
+			<pattr name = "5-routing-keyE" value = "0" />
+			<pattr name = "5-routing-keyI" value = "0" />
+			<pattr name = "5-routing-keyO" value = "0" />
+			<pattr name = "5-routing-keyP" value = "0" />
+			<pattr name = "5-routing-keyR" value = "0" />
+			<pattr name = "5-routing-keyT" value = "0" />
+			<pattr name = "5-routing-keyU" value = "0" />
+			<pattr name = "5-routing-keyY" value = "0" />
+			<pattr name = "5-routing-keyZ" value = "0" />
+		</patcher>
+		<patcher name = "mema.pattr_PagesRouting_orch[3]">
+			<pattr name = "6-page-keyA" value = "0" />
+			<pattr name = "6-page-keyE" value = "0" />
+			<pattr name = "6-page-keyI" value = "0" />
+			<pattr name = "6-page-keyO" value = "0" />
+			<pattr name = "6-page-keyP" value = "0" />
+			<pattr name = "6-page-keyR" value = "0" />
+			<pattr name = "6-page-keyT" value = "0" />
+			<pattr name = "6-page-keyU" value = "0" />
+			<pattr name = "6-page-keyY" value = "0" />
+			<pattr name = "6-page-keyZ" value = "0" />
+			<pattr name = "6-routing-keyA" value = "0" />
+			<pattr name = "6-routing-keyE" value = "0" />
+			<pattr name = "6-routing-keyI" value = "0" />
+			<pattr name = "6-routing-keyO" value = "0" />
+			<pattr name = "6-routing-keyP" value = "0" />
+			<pattr name = "6-routing-keyR" value = "0" />
+			<pattr name = "6-routing-keyT" value = "0" />
+			<pattr name = "6-routing-keyU" value = "0" />
+			<pattr name = "6-routing-keyY" value = "0" />
+			<pattr name = "6-routing-keyZ" value = "0" />
+		</patcher>
+		<patcher name = "mema.pattr_PagesRouting_orch[8]">
+			<pattr name = "7-page-keyA" value = "0" />
+			<pattr name = "7-page-keyE" value = "0" />
+			<pattr name = "7-page-keyI" value = "0" />
+			<pattr name = "7-page-keyO" value = "0" />
+			<pattr name = "7-page-keyP" value = "0" />
+			<pattr name = "7-page-keyR" value = "0" />
+			<pattr name = "7-page-keyT" value = "0" />
+			<pattr name = "7-page-keyU" value = "0" />
+			<pattr name = "7-page-keyY" value = "0" />
+			<pattr name = "7-page-keyZ" value = "0" />
+			<pattr name = "7-routing-keyA" value = "0" />
+			<pattr name = "7-routing-keyE" value = "0" />
+			<pattr name = "7-routing-keyI" value = "0" />
+			<pattr name = "7-routing-keyO" value = "0" />
+			<pattr name = "7-routing-keyP" value = "0" />
+			<pattr name = "7-routing-keyR" value = "0" />
+			<pattr name = "7-routing-keyT" value = "0" />
+			<pattr name = "7-routing-keyU" value = "0" />
+			<pattr name = "7-routing-keyY" value = "0" />
+			<pattr name = "7-routing-keyZ" value = "0" />
+		</patcher>
+		<patcher name = "mema.pattr_PagesRouting_orch[7]">
+			<pattr name = "8-page-keyA" value = "0" />
+			<pattr name = "8-page-keyE" value = "0" />
+			<pattr name = "8-page-keyI" value = "0" />
+			<pattr name = "8-page-keyO" value = "0" />
+			<pattr name = "8-page-keyP" value = "0" />
+			<pattr name = "8-page-keyR" value = "0" />
+			<pattr name = "8-page-keyT" value = "0" />
+			<pattr name = "8-page-keyU" value = "0" />
+			<pattr name = "8-page-keyY" value = "0" />
+			<pattr name = "8-page-keyZ" value = "0" />
+			<pattr name = "8-routing-keyA" value = "0" />
+			<pattr name = "8-routing-keyE" value = "0" />
+			<pattr name = "8-routing-keyI" value = "0" />
+			<pattr name = "8-routing-keyO" value = "0" />
+			<pattr name = "8-routing-keyP" value = "0" />
+			<pattr name = "8-routing-keyR" value = "0" />
+			<pattr name = "8-routing-keyT" value = "0" />
+			<pattr name = "8-routing-keyU" value = "0" />
+			<pattr name = "8-routing-keyY" value = "0" />
+			<pattr name = "8-routing-keyZ" value = "0" />
+		</patcher>
+		<patcher name = "mema.pattr_PagesRouting_orch[6]">
+			<pattr name = "9-page-keyA" value = "0" />
+			<pattr name = "9-page-keyE" value = "0" />
+			<pattr name = "9-page-keyI" value = "0" />
+			<pattr name = "9-page-keyO" value = "0" />
+			<pattr name = "9-page-keyP" value = "0" />
+			<pattr name = "9-page-keyR" value = "0" />
+			<pattr name = "9-page-keyT" value = "0" />
+			<pattr name = "9-page-keyU" value = "0" />
+			<pattr name = "9-page-keyY" value = "0" />
+			<pattr name = "9-page-keyZ" value = "0" />
+			<pattr name = "9-routing-keyA" value = "0" />
+			<pattr name = "9-routing-keyE" value = "0" />
+			<pattr name = "9-routing-keyI" value = "0" />
+			<pattr name = "9-routing-keyO" value = "0" />
+			<pattr name = "9-routing-keyP" value = "0" />
+			<pattr name = "9-routing-keyR" value = "0" />
+			<pattr name = "9-routing-keyT" value = "0" />
+			<pattr name = "9-routing-keyU" value = "0" />
+			<pattr name = "9-routing-keyY" value = "0" />
+			<pattr name = "9-routing-keyZ" value = "0" />
+		</patcher>
+	</slot>
+</pattrstorage>
+

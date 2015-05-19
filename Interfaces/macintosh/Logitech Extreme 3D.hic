@@ -1,0 +1,17 @@
+4, bool Gachette 0 1 0 normal;
+5, bool "Bouton 2" 0 1 0 normal;
+6, bool "Bouton 3" 0 1 0 normal;
+7, bool "Bouton 4" 0 1 0 normal;
+8, bool "Bouton 5" 0 1 0 normal;
+9, bool "Bouton 6" 0 1 0 normal;
+10, bool "7 (F2)" 0 1 0 normal;
+11, bool "8 (F1)" 0 1 0 normal;
+12, bool "9 (Flèche gauche)" 0 1 0 normal;
+13, bool "10 (Flèche droite)" 0 1 0 normal;
+14, bool "11 (F3)" 0 1 0 normal;
+15, bool "12 (F4)" 0 1 0 normal;
+16, continu "Axe X" 0 1023 508 normal;
+17, continu "Axe Y" 0 1023 508 inverse;
+18, enum Molette 9 "0 1 2 3 4 5 6 7 8" 8 normal;
+19, continu "Axe Z" 0 255 110 normal;
+20, continu Nageoire 0 255 0 inverse;

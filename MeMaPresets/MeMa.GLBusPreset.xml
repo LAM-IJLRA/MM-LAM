@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+
+<pattrstorage name = "MeMa.GLBusPreset.default">
+	<slot number = "1" name = "SlideLeft">
+		<pattr name = "FB-OnOff" value = "1" />
+		<pattr name = "FB-blend_mode" value = "1 1" />
+		<pattr name = "FB-color" value = "0.9 0.9 0.9 0.9" />
+		<pattr name = "FB-position" value = "-0.04 0. 0." />
+		<pattr name = "FB-rotatexyz" value = "0. 0. 0." />
+		<pattr name = "FB-scale" value = "1. 1. 1." />
+		<pattr name = "FB-texAnchor" value = "0.5 0.5" />
+		<pattr name = "FB-texCor_s" value = "0. 0. 0." />
+		<pattr name = "FB-texCor_t" value = "0. 0. 0." />
+		<pattr name = "FB-theta" value = "0." />
+		<pattr name = "FB-zoom" value = "1. 1." />
+		<pattr name = "FB-zoom[1]" value = "1. 1." />
+		<pattr name = "REN-cameraLookAt" value = "0" />
+		<pattr name = "REN-cameraPosition" value = "0. 0. 2." />
+		<pattr name = "REN-lensAngle" value = "0" />
+		<pattr name = "REN-renderPosition" value = "0" />
+		<pattr name = "REN-renderScale" value = "0" />
+		<pattr name = "REN-rotationXYZ" value = "0" />
+		<pattr name = "TEX-apply" value = "0" />
+		<pattr name = "TEX-autoscale" value = "0" />
+		<pattr name = "TEX-blendcolor" value = "0" />
+		<pattr name = "TEX-bordercolor" value = "0" />
+		<pattr name = "TEX-colormode" value = "0" />
+		<pattr name = "TEX-mode" value = "0" />
+		<pattr name = "TEX-wrap" value = "0" />
+	</slot>
+	<slot number = "2" name = "Triple">
+		<pattr name = "FB-OnOff" value = "1" />
+		<pattr name = "FB-blend_mode" value = "" />
+		<pattr name = "FB-color" value = "" />
+		<pattr name = "FB-position" value = "7. 0. 0." />
+		<pattr name = "FB-rotatexyz" value = "" />
+		<pattr name = "FB-scale" value = "" />
+		<pattr name = "FB-texAnchor" value = "" />
+		<pattr name = "FB-texCor_s" value = "" />
+		<pattr name = "FB-texCor_t" value = "" />
+		<pattr name = "FB-theta" value = "" />
+		<pattr name = "FB-zoom" value = "" />
+		<pattr name = "FB-zoom[1]" value = "" />
+		<pattr name = "REN-cameraLookAt" value = "" />
+		<pattr name = "REN-cameraPosition" value = "" />
+		<pattr name = "REN-lensAngle" value = "" />
+		<pattr name = "REN-renderPosition" value = "" />
+		<pattr name = "REN-renderScale" value = "" />
+		<pattr name = "REN-rotationXYZ" value = "" />
+		<pattr name = "TEX-apply" value = "" />
+		<pattr name = "TEX-autoscale" value = "" />
+		<pattr name = "TEX-blendcolor" value = "" />
+		<pattr name = "TEX-bordercolor" value = "" />
+		<pattr name = "TEX-colormode" value = "" />
+		<pattr name = "TEX-mode" value = "" />
+		<pattr name = "TEX-wrap" value = "" />
+	</slot>
+	<slot number = "3" name = "IR1">
+		<pattr name = "FB-OnOff" value = "1" />
+		<pattr name = "FB-blend_mode" value = "4 0" />
+		<pattr name = "FB-color" value = "1. 1. 1. 0.32" />
+		<pattr name = "FB-position" value = "0. 0. 0." />
+		<pattr name = "FB-rotatexyz" value = "0. 0. 0." />
+		<pattr name = "FB-scale" value = "1.02 1.11 1." />
+		<pattr name = "FB-texAnchor" value = "0.5 0.5" />
+		<pattr name = "FB-texCor_s" value = "0. 0. 0." />
+		<pattr name = "FB-texCor_t" value = "0. 0. 0." />
+		<pattr name = "FB-theta" value = "180." />
+		<pattr name = "FB-zoom" value = "1. 1." />
+		<pattr name = "FB-zoom[1]" value = "1. 1." />
+		<pattr name = "REN-cameraLookAt" value = "" />
+		<pattr name = "REN-cameraPosition" value = "" />
+		<pattr name = "REN-lensAngle" value = "" />
+		<pattr name = "REN-renderPosition" value = "" />
+		<pattr name = "REN-renderScale" value = "" />
+		<pattr name = "REN-rotationXYZ" value = "" />
+		<pattr name = "TEX-apply" value = "" />
+		<pattr name = "TEX-autoscale" value = "" />
+		<pattr name = "TEX-blendcolor" value = "" />
+		<pattr name = "TEX-bordercolor" value = "" />
+		<pattr name = "TEX-colormode" value = "" />
+		<pattr name = "TEX-mode" value = "" />
+		<pattr name = "TEX-wrap" value = "" />
+	</slot>
+	<slot number = "4" name = "IR2">
+		<pattr name = "FB-OnOff" value = "1" />
+		<pattr name = "FB-blend_mode" value = "4 0" />
+		<pattr name = "FB-color" value = "1. 1. 1. 0.32" />
+		<pattr name = "FB-position" value = "0. 0. 0." />
+		<pattr name = "FB-rotatexyz" value = "0. 0. 0." />
+		<pattr name = "FB-scale" value = "1.02 1.11 1." />
+		<pattr name = "FB-texAnchor" value = "0.5 0.5" />
+		<pattr name = "FB-texCor_s" value = "0. 0. 0." />
+		<pattr name = "FB-texCor_t" value = "0. 0. 0." />
+		<pattr name = "FB-theta" value = "60." />
+		<pattr name = "FB-zoom" value = "1. 1." />
+		<pattr name = "FB-zoom[1]" value = "1. 1." />
+		<pattr name = "REN-cameraLookAt" value = "" />
+		<pattr name = "REN-cameraPosition" value = "" />
+		<pattr name = "REN-lensAngle" value = "" />
+		<pattr name = "REN-renderPosition" value = "" />
+		<pattr name = "REN-renderScale" value = "" />
+		<pattr name = "REN-rotationXYZ" value = "" />
+		<pattr name = "TEX-apply" value = "" />
+		<pattr name = "TEX-autoscale" value = "" />
+		<pattr name = "TEX-blendcolor" value = "" />
+		<pattr name = "TEX-bordercolor" value = "" />
+		<pattr name = "TEX-colormode" value = "" />
+		<pattr name = "TEX-mode" value = "" />
+		<pattr name = "TEX-wrap" value = "" />
+	</slot>
+	<slot number = "5" name = "IR3">
+		<pattr name = "FB-OnOff" value = "1" />
+		<pattr name = "FB-blend_mode" value = "7 5" />
+		<pattr name = "FB-color" value = "1. 1. 1. 0.32" />
+		<pattr name = "FB-position" value = "0. 0. 0." />
+		<pattr name = "FB-rotatexyz" value = "0. 0. 0." />
+		<pattr name = "FB-scale" value = "1.02 1.11 1." />
+		<pattr name = "FB-texAnchor" value = "0.5 0.5" />
+		<pattr name = "FB-texCor_s" value = "0. 0. 0." />
+		<pattr name = "FB-texCor_t" value = "0. 0. 0." />
+		<pattr name = "FB-theta" value = "60." />
+		<pattr name = "FB-zoom" value = "1. 1." />
+		<pattr name = "FB-zoom[1]" value = "1. 1." />
+		<pattr name = "REN-cameraLookAt" value = "" />
+		<pattr name = "REN-cameraPosition" value = "" />
+		<pattr name = "REN-lensAngle" value = "" />
+		<pattr name = "REN-renderPosition" value = "" />
+		<pattr name = "REN-renderScale" value = "" />
+		<pattr name = "REN-rotationXYZ" value = "" />
+		<pattr name = "TEX-apply" value = "" />
+		<pattr name = "TEX-autoscale" value = "" />
+		<pattr name = "TEX-blendcolor" value = "" />
+		<pattr name = "TEX-bordercolor" value = "" />
+		<pattr name = "TEX-colormode" value = "" />
+		<pattr name = "TEX-mode" value = "" />
+		<pattr name = "TEX-wrap" value = "" />
+	</slot>
+	<slot number = "6" name = "90">
+		<pattr name = "FB-OnOff" value = "1" />
+		<pattr name = "FB-blend_mode" value = "1 1" />
+		<pattr name = "FB-color" value = "0.9 0.9 0.9 0.9" />
+		<pattr name = "FB-position" value = "0. 0. 0." />
+		<pattr name = "FB-rotatexyz" value = "0. 0. 0." />
+		<pattr name = "FB-scale" value = "1. 1. 1." />
+		<pattr name = "FB-texAnchor" value = "0.5 0.5" />
+		<pattr name = "FB-texCor_s" value = "0. 0. 0." />
+		<pattr name = "FB-texCor_t" value = "0. 0. 0." />
+		<pattr name = "FB-theta" value = "90." />
+		<pattr name = "FB-zoom" value = "1. 1." />
+		<pattr name = "FB-zoom[1]" value = "1. 1." />
+		<pattr name = "REN-cameraLookAt" value = "0. 0. 0." />
+		<pattr name = "REN-cameraPosition" value = "0. 0. 2." />
+		<pattr name = "REN-lensAngle" value = "45." />
+		<pattr name = "REN-renderPosition" value = "0. 0. 0." />
+		<pattr name = "REN-renderScale" value = "1. 1. 1." />
+		<pattr name = "REN-rotationXYZ" value = "0. -0. 0." />
+		<pattr name = "TEX-apply" value = "modulate" />
+		<pattr name = "TEX-autoscale" value = "1" />
+		<pattr name = "TEX-blendcolor" value = "0. 0. 0. 1." />
+		<pattr name = "TEX-bordercolor" value = "0.5 0.5 0.5 1." />
+		<pattr name = "TEX-colormode" value = "auto" />
+		<pattr name = "TEX-mode" value = "dynamic" />
+		<pattr name = "TEX-wrap" value = "mirroredrepeat mirroredrepeat mirroredrepeat" />
+	</slot>
+	<slot number = "7" name = "Bordel">
+		<pattr name = "FB-OnOff" value = "1" />
+		<pattr name = "FB-blend_mode" value = "1 1" />
+		<pattr name = "FB-color" value = "0.91 0.6 0.95 0.9" />
+		<pattr name = "FB-position" value = "0. 0. 0.27" />
+		<pattr name = "FB-rotatexyz" value = "0. 0. 0." />
+		<pattr name = "FB-scale" value = "1. 1. 1." />
+		<pattr name = "FB-texAnchor" value = "0.66 0.5" />
+		<pattr name = "FB-texCor_s" value = "0. 0. 0." />
+		<pattr name = "FB-texCor_t" value = "0. 0. 0." />
+		<pattr name = "FB-theta" value = "144." />
+		<pattr name = "FB-zoom" value = "1. 1." />
+		<pattr name = "FB-zoom[1]" value = "1. 1." />
+		<pattr name = "REN-cameraLookAt" value = "0. 0. 0." />
+		<pattr name = "REN-cameraPosition" value = "0. 0. 2." />
+		<pattr name = "REN-lensAngle" value = "45." />
+		<pattr name = "REN-renderPosition" value = "0. 0. 0." />
+		<pattr name = "REN-renderScale" value = "1. 1. 1." />
+		<pattr name = "REN-rotationXYZ" value = "0. -0. 0." />
+		<pattr name = "TEX-apply" value = "modulate" />
+		<pattr name = "TEX-autoscale" value = "1" />
+		<pattr name = "TEX-blendcolor" value = "0. 0. 0. 1." />
+		<pattr name = "TEX-bordercolor" value = "0.5 0.5 0.5 1." />
+		<pattr name = "TEX-colormode" value = "auto" />
+		<pattr name = "TEX-mode" value = "dynamic" />
+		<pattr name = "TEX-wrap" value = "mirroredrepeat mirroredrepeat mirroredrepeat" />
+	</slot>
+</pattrstorage>
+
