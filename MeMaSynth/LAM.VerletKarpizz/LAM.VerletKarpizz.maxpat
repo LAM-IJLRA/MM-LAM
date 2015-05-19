@@ -26235,6 +26235,36 @@
 										"tags" : "",
 										"boxes" : [ 											{
 												"box" : 												{
+													"color" : [ 0.047059, 0.913725, 0.913725, 1.0 ],
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-3",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 81.25, 153.0, 246.0, 20.0 ],
+													"text" : "SDK.GLparams #1 #2 Mesh2"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.047059, 0.913725, 0.913725, 1.0 ],
+													"fontname" : "Arial",
+													"fontsize" : 12.0,
+													"id" : "obj-23",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 94.25, 65.0, 246.0, 20.0 ],
+													"text" : "SDK.GLparams #1 #2 Mesh1"
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"id" : "obj-2",
 													"maxclass" : "button",
 													"numinlets" : 1,
@@ -26283,7 +26313,7 @@
 													"numinlets" : 9,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 50.0, 134.0, 576.0, 33.0 ],
+													"patching_rect" : [ 51.0, 182.0, 576.0, 33.0 ],
 													"text" : "jit.gl.mesh MetaMallette @draw_mode quad_grid @poly_mode 2 2 @point_size 10 @antialias 1 @layer 2 @automatic 0"
 												}
 
@@ -26308,12 +26338,30 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "jit_matrix" ],
-													"patching_rect" : [ 266.0, 40.0, 25.0, 25.0 ]
+													"patching_rect" : [ 269.375, 24.0, 25.0, 25.0 ]
 												}
 
 											}
  ],
 										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-14", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-23", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-15", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
 												"patchline" : 												{
 													"destination" : [ "obj-14", 0 ],
 													"disabled" : 0,
