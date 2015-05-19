@@ -1,0 +1,628 @@
+//-----------------------------------------------------
+// name: "vg.karplus"
+// version: "1.0"
+// author: "Vincent Goudard"
+// license: "BSD"
+// copyright: "vg.karplus.dsp (c)Vincent Goudard made with Faust (c) GRAME 2006"
+//
+// Code generated with Faust 0.9.29 (http://faust.grame.fr)
+//-----------------------------------------------------
+/* link with  */
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <limits.h>
+#include <math.h>
+#include <errno.h>
+#include <time.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <assert.h>
+#include <string>
+#include <vector>
+#include <map>
+#include <math.h>
+
+#ifdef __APPLE__
+#include <Carbon/Carbon.h>
+#include <unistd.h>
+#endif
+
+using namespace std ;
+
+// There is a bug with powf() when cross compiling with mingw
+// the following macro avoid the problem
+#ifdef WIN32
+#define powf(x,y) pow(x,y)
+#define expf(x) exp(x)
+#endif
+
+// On Intel set FZ (Flush to Zero) and DAZ (Denormals Are Zero)
+// flags to avoid costly denormals
+#ifdef __SSE__
+    #include <xmmintrin.h>
+    #ifdef __SSE2__
+        #define AVOIDDENORMALS _mm_setcsr(_mm_getcsr() | 0x8040)
+    #else
+        #define AVOIDDENORMALS _mm_setcsr(_mm_getcsr() | 0x8000)
+    #endif
+#else
+    #define AVOIDDENORMALS 
+#endif
+
+struct Meta : map<const char*, const char*>
+{
+    void declare (const char* key, const char* value) { (*this)[key]=value; }
+};
+	
+#ifdef __GNUC__
+
+//-------------------------------------------------------------------
+// Generic min and max using gcc extensions
+//-------------------------------------------------------------------
+
+#define max(x,y) (((x)>(y)) ? (x) : (y))
+#define min(x,y) (((x)<(y)) ? (x) : (y))
+
+//abs(x) should be already predefined
+
+#else
+
+//-------------------------------------------------------------------
+// Generic min and max using c++ inline
+//-------------------------------------------------------------------
+
+inline int 		max (unsigned int a, unsigned int b) { return (a>b) ? a : b; }
+inline int 		max (int a, int b) 			{ return (a>b) ? a : b; }
+
+inline long 	max (long a, long b) 		{ return (a>b) ? a : b; }
+inline long 	max (int a, long b) 		{ return (a>b) ? a : b; }
+inline long 	max (long a, int b) 		{ return (a>b) ? a : b; }
+
+inline float 	max (float a, float b) 		{ return (a>b) ? a : b; }
+inline float 	max (int a, float b) 		{ return (a>b) ? a : b; }
+inline float 	max (float a, int b) 		{ return (a>b) ? a : b; }
+inline float 	max (long a, float b) 		{ return (a>b) ? a : b; }
+inline float 	max (float a, long b) 		{ return (a>b) ? a : b; }
+
+inline double 	max (double a, double b) 	{ return (a>b) ? a : b; }
+inline double 	max (int a, double b) 		{ return (a>b) ? a : b; }
+inline double 	max (double a, int b) 		{ return (a>b) ? a : b; }
+inline double 	max (long a, double b) 		{ return (a>b) ? a : b; }
+inline double 	max (double a, long b) 		{ return (a>b) ? a : b; }
+inline double 	max (float a, double b) 	{ return (a>b) ? a : b; }
+inline double 	max (double a, float b) 	{ return (a>b) ? a : b; }
+
+
+inline int 		min (int a, int b) 			{ return (a<b) ? a : b; }
+
+inline long 	min (long a, long b) 		{ return (a<b) ? a : b; }
+inline long 	min (int a, long b) 		{ return (a<b) ? a : b; }
+inline long 	min (long a, int b) 		{ return (a<b) ? a : b; }
+
+inline float 	min (float a, float b) 		{ return (a<b) ? a : b; }
+inline float 	min (int a, float b) 		{ return (a<b) ? a : b; }
+inline float 	min (float a, int b) 		{ return (a<b) ? a : b; }
+inline float 	min (long a, float b) 		{ return (a<b) ? a : b; }
+inline float 	min (float a, long b) 		{ return (a<b) ? a : b; }
+
+inline double 	min (double a, double b) 	{ return (a<b) ? a : b; }
+inline double 	min (int a, double b) 		{ return (a<b) ? a : b; }
+inline double 	min (double a, int b) 		{ return (a<b) ? a : b; }
+inline double 	min (long a, double b) 		{ return (a<b) ? a : b; }
+inline double 	min (double a, long b) 		{ return (a<b) ? a : b; }
+inline double 	min (float a, double b) 	{ return (a<b) ? a : b; }
+inline double 	min (double a, float b) 	{ return (a<b) ? a : b; }
+		
+#endif
+
+// abs is now predefined
+//template<typename T> T abs (T a)			{ return (a<T(0)) ? -a : a; }
+
+
+inline int		lsr (int x, int n)			{ return int(((unsigned int)x) >> n); }
+
+inline int int2pow2 (int x)	{ int r=0; while ((1<<r)<x) r++; return r; }
+
+
+/******************************************************************************
+*******************************************************************************
+
+							       VECTOR INTRINSICS
+
+*******************************************************************************
+*******************************************************************************/
+
+
+
+/******************************************************************************
+*******************************************************************************
+
+								USER INTERFACE
+
+*******************************************************************************
+*******************************************************************************/
+
+class UI
+{
+		bool fStopped;
+		
+	public:
+			
+		UI() : fStopped(false) {}
+		virtual ~UI() {}
+		
+		virtual void addButton(const char* label, float* zone) = 0;
+		virtual void addToggleButton(const char* label, float* zone) = 0;
+		virtual void addCheckButton(const char* label, float* zone) = 0;
+		virtual void addVerticalSlider(const char* label, float* zone, float init, float min, float max, float step) = 0;
+		virtual void addHorizontalSlider(const char* label, float* zone, float init, float min, float max, float step) = 0;
+		virtual void addNumEntry(const char* label, float* zone, float init, float min, float max, float step) = 0;
+		
+		virtual void addNumDisplay(const char* label, float* zone, int precision) = 0;
+		virtual void addTextDisplay(const char* label, float* zone, char* names[], float min, float max) = 0;
+		virtual void addHorizontalBargraph(const char* label, float* zone, float min, float max) = 0;
+		virtual void addVerticalBargraph(const char* label, float* zone, float min, float max) = 0;
+		
+		virtual void openFrameBox(const char* label) = 0;
+		virtual void openTabBox(const char* label) = 0;
+		virtual void openHorizontalBox(const char* label) = 0;
+		virtual void openVerticalBox(const char* label) = 0;
+		virtual void closeBox() = 0;
+		
+		virtual void run() {};
+		
+		void stop()		{ fStopped = true; }
+		bool stopped() 	{ return fStopped; }
+        
+        virtual void declare(float* zone, const char* key, const char* value) {}
+};
+
+
+/******************************************************************************
+*******************************************************************************
+
+								FAUST DSP
+
+*******************************************************************************
+*******************************************************************************/
+
+
+
+//----------------------------------------------------------------
+//  definition du processeur de signal
+//----------------------------------------------------------------
+			
+class dsp {
+
+	 protected:
+	 
+		int fSamplingFreq;
+		
+	 public:
+	 
+		dsp() {}
+		virtual int getNumInputs() 										= 0;
+		virtual int getNumOutputs() 									= 0;
+		virtual void buildUserInterface(UI* interface) 					= 0;
+		virtual void init(int samplingRate) 							= 0;
+	 	virtual void compute(int len, float** inputs, float** outputs) 	= 0;
+};
+
+
+#ifndef FAUSTFLOAT
+#define FAUSTFLOAT float
+#endif  
+
+typedef long double quad;
+
+class mydsp : public dsp{
+  private:
+	int 	IOTA;
+	float 	fVec0[8192];
+	FAUSTFLOAT 	fslider0;
+	FAUSTFLOAT 	fslider1;
+	float 	fConst0;
+	float 	fRec1[3];
+	FAUSTFLOAT 	fslider2;
+	float 	fRec0[2];
+  public:
+	static void metadata(Meta* m) 	{ 
+		m->declare("name", "vg.karplus");
+		m->declare("version", "1.0");
+		m->declare("author", "Vincent Goudard");
+		m->declare("license", "BSD");
+		m->declare("copyright", "vg.karplus.dsp (c)Vincent Goudard made with Faust (c) GRAME 2006");
+	}
+
+	virtual int getNumInputs() 	{ return 1; }
+	virtual int getNumOutputs() 	{ return 1; }
+	static void classInit(int samplingFreq) {
+	}
+	virtual void instanceInit(int samplingFreq) {
+		fSamplingFreq = samplingFreq;
+		IOTA = 0;
+		for (int i=0; i<8192; i++) fVec0[i] = 0;
+		fslider0 = 1e+03f;
+		fslider1 = 4.4e+02f;
+		fConst0 = (6.283185307179586f / fSamplingFreq);
+		for (int i=0; i<3; i++) fRec1[i] = 0;
+		fslider2 = 1e+03f;
+		for (int i=0; i<2; i++) fRec0[i] = 0;
+	}
+	virtual void init(int samplingFreq) {
+		classInit(samplingFreq);
+		instanceInit(samplingFreq);
+	}
+	virtual void buildUserInterface(UI* interface) {
+		interface->openVerticalBox("resonator");
+		interface->declare(&fslider0, "unit", "Hz");
+		interface->addHorizontalSlider("cutoff", &fslider0, 1e+03f, 1e+02f, 1.8e+04f, 1.0f);
+		interface->declare(&fslider2, "unit", "ms");
+		interface->addHorizontalSlider("duration", &fslider2, 1e+03f, 0.0f, 1e+05f, 0.1f);
+		interface->declare(&fslider1, "unit", "Hz");
+		interface->addHorizontalSlider("pitchfreq", &fslider1, 4.4e+02f, 1.0f, 1.5e+04f, 0.001f);
+		interface->closeBox();
+	}
+	virtual void compute (int count, FAUSTFLOAT** input, FAUSTFLOAT** output) {
+		float 	fSlow0 = fslider0;
+		float 	fSlow1 = fslider1;
+		float 	fSlow2 = (fSlow1 * (1 + (0.261f * (fSlow1 / fSlow0))));
+		float 	fSlow3 = (4.41e+04f / fSlow2);
+		int 	iSlow4 = int((int((fSlow3 - 1.5f)) & 4095));
+		int 	iSlow5 = int((1 + iSlow4));
+		int 	iSlow6 = int((1 + iSlow5));
+		float 	fSlow7 = (fConst0 * max(0, fSlow0));
+		float 	fSlow8 = cosf(fSlow7);
+		float 	fSlow9 = (1 - fSlow8);
+		float 	fSlow10 = (2 * fSlow8);
+		float 	fSlow11 = (0.7142857142857143f * sinf(fSlow7));
+		float 	fSlow12 = (fSlow11 - 1);
+		float 	fSlow13 = (1.0f / (1 + fSlow11));
+		float 	fSlow14 = (1.0f - (4.41e+04f / (fSlow2 * ((44.1f * fslider2) + fSlow3))));
+		FAUSTFLOAT* input0 = input[0];
+		FAUSTFLOAT* output0 = output[0];
+		for (int i=0; i<count; i++) {
+			float fTemp0 = ((float)input0[i] + fRec0[1]);
+			fVec0[IOTA&8191] = fTemp0;
+			fRec1[0] = (fSlow13 * (((fSlow12 * fRec1[2]) + (fSlow10 * fRec1[1])) + (fSlow9 * ((fVec0[(IOTA-iSlow5)&8191] + (0.5f * fVec0[(IOTA-iSlow4)&8191])) + (0.5f * fVec0[(IOTA-iSlow6)&8191])))));
+			fRec0[0] = (fSlow14 * fRec1[0]);
+			output0[i] = (FAUSTFLOAT)fRec0[0];
+			// post processing
+			fRec0[1] = fRec0[0];
+			fRec1[2] = fRec1[1]; fRec1[1] = fRec1[0];
+			IOTA = IOTA+1;
+		}
+	}
+};
+
+
+
+				
+/* Faust code wrapper ------- */
+
+#include "ext.h"
+#include "z_dsp.h"
+#include <string.h>
+
+#define ASSIST_INLET 	1  		/* should be defined somewhere ?? */
+#define ASSIST_OUTLET 	2		/* should be defined somewhere ?? */
+
+class mspUI;
+
+
+/*--------------------------------------------------------------------------*/
+typedef struct faust
+{
+	t_pxobject m_ob;
+	t_atom *m_seen,*m_want;
+	short m_where;
+	void** args;
+	mspUI* dspUI;
+	mydsp* dsp;
+} t_faust;
+
+void *faust_class;
+
+/*--------------------------------------------------------------------------*/
+class mspUIObject {
+
+	protected:
+		
+		string fLabel;
+		float* fZone;
+		
+		float range(float min, float max, float val) {return (val < min) ? min : (val > max) ? max : val;}
+	
+	public:
+			
+		mspUIObject(const char* label, float* zone):fLabel(label),fZone(zone) {}
+		virtual ~mspUIObject() {}
+		
+		virtual void SetValue(double f) {*fZone = range(0.0,1.0,f);}
+		virtual void toString(char* buffer) {}
+		virtual string GetName() {return fLabel;}
+};
+
+/*--------------------------------------------------------------------------*/
+class mspToggleButton : public mspUIObject {
+	
+	public:	
+	
+		mspToggleButton(const char* label, float* zone):mspUIObject(label,zone) {}
+		virtual ~mspToggleButton() {}
+				
+		void toString(char* buffer)
+		{
+		#ifdef WIN32
+            sprintf(buffer, "ToggleButton(float): %s", fLabel.c_str());
+		#else
+			std::sprintf(buffer, "ToggleButton(float): %s", fLabel.c_str());
+		#endif	
+		}
+};
+
+/*--------------------------------------------------------------------------*/
+class mspCheckButton : public mspUIObject {
+	
+	public:
+	
+		mspCheckButton(const char* label, float* zone):mspUIObject(label,zone) {}
+		virtual ~mspCheckButton() {}
+		
+		void toString(char* buffer)
+		{
+		#ifdef WIN32
+            sprintf(buffer, "CheckButton(float): %s", fLabel.c_str());
+		#else
+			std::sprintf(buffer, "CheckButton(float): %s", fLabel.c_str());
+		#endif
+		}
+};
+
+/*--------------------------------------------------------------------------*/
+class mspButton : public mspUIObject {
+	
+	public:
+	
+		mspButton(const char* label, float* zone):mspUIObject(label,zone) {}
+		virtual ~mspButton() {}		
+		
+		void toString(char* buffer)
+		{
+		#ifdef WIN32
+            sprintf(buffer, "Button(float): %s", fLabel.c_str());
+		#else
+			std::sprintf(buffer, "Button(float): %s", fLabel.c_str());
+		#endif
+		}	
+};
+
+/*--------------------------------------------------------------------------*/
+class mspSlider : public mspUIObject{
+
+	private:
+	
+		float fInit;
+		float fMin;
+		float fMax;
+		float fStep;
+	
+	public:	
+	
+		mspSlider(const char* label, float* zone, float init, float min, float max, float step)
+			:mspUIObject(label,zone),fInit(init),fMin(min),fMax(max),fStep(step) {}
+		virtual ~mspSlider() {}	
+		
+		void toString(char* buffer)
+		{
+		#ifdef WIN32
+            sprintf(buffer, "Slider(float): %s [%.1f:%.1f:%.1f]", fLabel.c_str(), fMin, fInit, fMax);
+		#else
+			std::sprintf(buffer, "Slider(float): %s [%.1f:%.1f:%.1f]", fLabel.c_str(), fMin, fInit, fMax);
+		#endif
+		}
+		
+		void SetValue(double f) {*fZone = range(fMin,fMax,f);}
+};
+
+/*--------------------------------------------------------------------------*/
+class mspUI : public UI
+{
+	private:
+	
+		map<string,mspUIObject*> fUITable;
+		
+	public:
+		typedef map<string,mspUIObject*>::iterator iterator;
+			
+		mspUI(){}
+		virtual ~mspUI() 
+		{
+			for (iterator iter = fUITable.begin(); iter != fUITable.end(); iter++) 
+				delete (iter->second);
+   		}
+		
+		void addButton(const char* label, float* zone) {fUITable[string(label)] = new mspButton(label, zone);}
+		
+		void addToggleButton(const char* label, float* zone) {fUITable[string(label)] = new mspToggleButton(label, zone);}
+		
+		void addCheckButton(const char* label, float* zone) {fUITable[string(label)] = new mspCheckButton(label, zone);}
+		
+		void addVerticalSlider(const char* label, float* zone, float init, float min, float max, float step) 
+		{ 	
+			fUITable[string(label)] = new mspSlider(label, zone, init, min, max, step);
+		}
+		
+		void addHorizontalSlider(const char* label, float* zone, float init, float min, float max, float step) 
+		{
+			fUITable[string(label)] = new mspSlider(label, zone, init, min, max, step);
+		}
+		
+		void addNumEntry(const char* label, float* zone, float init, float min, float max, float step)
+		{
+			fUITable[string(label)] = new mspSlider(label, zone, init, min, max, step);
+		}
+		
+		void openFrameBox(const char* label) {}
+		void openTabBox(const char* label) {}
+		void openHorizontalBox(const char* label) {}
+		void openVerticalBox(const char* label) {}
+		void closeBox() {}
+		
+		void SetValue(string name, double f) 
+		{
+			if(fUITable.count(name))
+				fUITable[name]->SetValue(f);
+		}
+		iterator begin()	{return fUITable.begin();}
+		iterator end()		{return fUITable.end();}
+							
+		// To be implemented
+		void addNumDisplay(const char* label, float* zone, int precision){}
+		void addTextDisplay(const char* label, float* zone, char* names[], float min, float max){}
+		void addHorizontalBargraph(const char* label, float* zone, float min, float max){}
+		void addVerticalBargraph(const char* label, float* zone, float min, float max){}
+}; 
+
+
+//--------------------------------------------------------------------------
+void faust_method(t_faust *obj, t_symbol *s, short ac, t_atom *at)
+{
+	if(ac < 0) return;
+    if(at[0].a_type != A_FLOAT) return;
+	
+    string name = string( (s)->s_name );
+    float value = at[0].a_w.w_float;
+	
+    // lookup du nom dans une std::map<string,mspUIObject *>
+    // ou une std::map<string,float *>
+    // et affectation de value;	
+	obj->dspUI->SetValue(name,value); // doesn't have any effect if name is unknown
+}
+
+/*--------------------------------------------------------------------------*/
+void *faust_new(t_symbol *s, short ac, t_atom *av)
+{
+	t_faust *x = (t_faust *)newobject(faust_class);
+		
+	x->dsp = new mydsp();
+	x->dspUI= new mspUI();
+	
+	x->dsp->init(long(sys_getsr()));
+	x->dsp->buildUserInterface(x->dspUI);
+	
+	x->args = (void**)calloc((x->dsp->getNumInputs()+x->dsp->getNumOutputs())+2, sizeof(void*));
+	
+	/* Multi in */
+	dsp_setup((t_pxobject *)x, x->dsp->getNumInputs());
+	
+	/* Multi out */
+	for (int i = 0; i< x->dsp->getNumOutputs(); i++) 
+		outlet_new((t_pxobject *)x, (char*)"signal");
+	
+	((t_pxobject *)x)->z_misc = Z_NO_INPLACE; // To assure input and output buffers are actually different
+	return x;
+}			
+
+/*--------------------------------------------------------------------------*/
+void faust_assist(t_faust *x, void *b, long msg, long a, char *dst)
+{
+    if (msg == ASSIST_INLET) {
+        if (a == 0) {
+            if (x->dsp->getNumInputs() == 0) {
+			#ifdef WIN32
+                sprintf(dst, "(signal) : Unused Input");
+			#else
+				std::sprintf(dst, "(signal) : Unused Input");
+			#endif
+            } else {
+			#ifdef WIN32
+                sprintf(dst, "(signal) : Audio Input %ld", (a+1));
+			#else
+				std::sprintf(dst, "(signal) : Audio Input %ld", (a+1));
+			#endif
+				post((char*)"------------------");
+				for (mspUI::iterator it = x->dspUI->begin(); it != x->dspUI->end(); ++it) {
+					char param[64];
+					it->second->toString(param);
+					post(param);
+				}
+			}
+        } else if (a < x->dsp->getNumInputs()) {
+		#ifdef WIN32
+            sprintf(dst, "(signal) : Audio Input %ld", (a+1));
+		#else
+			std::sprintf(dst, "(signal) : Audio Input %ld", (a+1));
+		#endif
+        }
+    } else if (msg == ASSIST_OUTLET) {
+	#ifdef WIN32
+        sprintf(dst, "(signal) : Audio Output %ld", (a+1));
+	#else
+		std::sprintf(dst, "(signal) : Audio Output %ld", (a+1));
+	#endif
+    }
+}
+
+/*--------------------------------------------------------------------------*/
+void faust_free(t_faust *x)
+{
+	dsp_free((t_pxobject *)x);
+	if (x->dsp) delete x->dsp;
+	if (x->dspUI) delete x->dspUI;
+	if (x->args)free(x->args);
+}
+
+/*--------------------------------------------------------------------------*/
+t_int *faust_perform(t_int *w)
+{
+	t_faust* x = (t_faust*) (w[1]);
+	long n = w[2];
+	int offset = 3;
+	AVOIDDENORMALS;
+	x->dsp->compute(n, ((float**)&w[offset]), ((float**)&w[offset+x->dsp->getNumInputs()]));
+	return (w + (x->dsp->getNumInputs()+x->dsp->getNumOutputs())+2+1);
+}
+
+/*--------------------------------------------------------------------------*/
+void  faust_dsp(t_faust *x, t_signal **sp, short *count)
+{
+	x->args[0] = x;
+	x->args[1] = (void*)sp[0]->s_n;
+	for (int i = 0; i<(x->dsp->getNumInputs()+x->dsp->getNumOutputs()); i++) 
+		x->args[i+2] = sp[i]->s_vec;
+	dsp_addv(faust_perform, (x->dsp->getNumInputs()+x->dsp->getNumOutputs())+2, x->args);
+}
+
+/*--------------------------------------------------------------------------*/
+int main()
+{
+	setup((t_messlist **)&faust_class, (method)faust_new, (method)faust_free, 
+		(short)sizeof(t_faust), 0L, A_DEFFLOAT, 0);
+   
+	dsp *thedsp = new mydsp();
+	mspUI *dspUI= new mspUI();
+	thedsp->buildUserInterface(dspUI);
+	
+	// Add the same method for every parameters and use the symbol as a selector 
+	// inside thid method
+	for (mspUI::iterator it = dspUI->begin(); it != dspUI->end(); ++it) {
+		char *name = const_cast<char *>(it->second->GetName().c_str());
+		addmess((method)faust_method, name, A_GIMME, 0);
+	}
+	
+	addmess((method)faust_dsp, (char*)"dsp", A_CANT, 0);
+	addmess((method)faust_assist, (char*)"assist", A_CANT, 0);
+	dsp_initclass();
+    
+    delete(dspUI);
+    delete(thedsp);
+	post((char*)"Faust DSP object");
+	return 0;
+}
+
+
+
+

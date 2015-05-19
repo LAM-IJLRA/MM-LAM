@@ -1,0 +1,1 @@
+DragX, MM.MinMax 0 0. 1. -10. 10.;Distance, MM.MinMax 0 0. 1. 0.6 0.1;GravityX, MM.MinMax 1 0. 1. -100. 100.;GravityY, MM.MinMax 2 0. 1. -100. 100.;

@@ -1,0 +1,1 @@
+DragX, MM.MinMax 0 0. 1. -10. 10.;target.posX, MM.Direct 1;target.posY, MM.Direct 2;Distance, MM.MinMax 0 0. 1. 0.6 0.1;

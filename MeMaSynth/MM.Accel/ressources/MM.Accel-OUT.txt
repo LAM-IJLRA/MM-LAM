@@ -1,0 +1,3 @@
+XYSpeed, "XY Speed";
+XPosition, "X Position";
+YPosition, "Y Position";

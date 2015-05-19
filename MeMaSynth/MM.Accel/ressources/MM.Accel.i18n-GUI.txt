@@ -1,0 +1,6 @@
+"information about this file", this file should contain captions for the various elements in the instrument's GUI. The format is the following\: [index\, caption]. The index is the scripting name of the comment element\, the caption is what it should show in the default language which is french.;
+Title1, "Matière sonore";
+Title2, "Matière visuelle";
+Title3, "Paramètres Audio";
+Title4, "Paramètres Vidéo";
+Title5, "Paramètres Vidéo";

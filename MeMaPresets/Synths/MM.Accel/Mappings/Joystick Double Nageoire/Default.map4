@@ -1,0 +1,16 @@
+DeclencheSon, MM.Direct 0;
+DeclencheImage, MM.Direct 0;
+PositionX, MM.MMCB 14 -2. 2. 0. 0.1;
+PositionY, MM.MMCB 15 -1.5 1.5 0. 0.1;
+SelectSample2, MM.Direct 2;
+Gel_Hauteur_Son, MM.Direct 3;
+SelectTexture2, MM.Direct 2;
+Gel_Image, MM.Direct 3;
+Volume, MM.MMCB 17 0. 100. 80. 0.;
+Intensite, MM.MMCB 17 0. 100. 70. 0.1;
+Transposition, MM.Direct 16;
+MiniBoucle, MM.Direct 4;
+SensLecture, MM.Direct 13;
+Restart, MM.Direct 0;
+Inertie, MM.Direct 1;
+Fragment, MM.MinMax 18 0. 1. 80. 200.;

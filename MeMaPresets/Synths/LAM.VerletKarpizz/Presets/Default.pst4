@@ -1,0 +1,9 @@
+GravityX-MMCB, 0 -1 1 0. 0.;GravityY-MMCB, -0.1 -1 1 0. 0.;Rigidity-MMCB, 0.3 0 1 0.5 0.;Distance-MMCB, 0.2 0 1 0.5 0.;BoxSizeX-MMCB, 0.5 0. 2. 0.5 0.;
+BoxSizeY-MMCB, 0.5 0. 2. 0.5 0.;
+BoxPositionX-MMCB, 0. -1. 1. 0. 0.;
+BoxPositionY-MMCB, 0. -1. 1. 0. 0.;
+BoxAngle-MMCB, 0. -180. 180. 0. 0.;
+Detune-MMCB, 0.3 0. 7. 3.5 0.;
+Decay-MMCB, 400. 0. 800. 400. 0.;
+FilterFreq-MMCB, 4000. 1000. 7000. 4000. 0.;
+Chord01, 36;Chord02, 41 48 53;Chord03, 52 62 72;OutDim, 8 8;InDim, 8 8;ShowBox, 1;

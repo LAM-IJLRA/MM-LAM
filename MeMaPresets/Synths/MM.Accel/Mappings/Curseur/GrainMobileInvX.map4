@@ -1,0 +1,1 @@
+DeclencheSon, MM.Direct 0;DeclencheImage, MM.Direct 0;PositionX, MM.MMCB 1 1. -1. 0. 0.;PositionY, MM.MMCB 2 -1. 1. 0. 0.;Gel_Hauteur_Son, MM.Direct 5;SelectSample2, MM.Direct 3;SelectTexture2, MM.Direct 3;SensLecture, MM.Direct 4;Gel_Image, MM.Direct 5;Sample1_Start, MM.MinMax 1 0. 1. 0. 5000.;Sample2_Start, MM.MinMax 1 0. 1. 3000. 8000.;
